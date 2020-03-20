@@ -1,0 +1,93 @@
+
+/* ===================== left of screen ===================== */
+#side_bar_iframe {
+                    border: 0;
+
+                    height: 100vh;
+                    width:  auto;
+                 }
+
+
+
+
+
+/* ===================== Center of screen ===================== */
+.center {
+          text-align: center;
+        }
+
+
+#logo_div {
+            margin-top:    120px;
+            margin-bottom: 20px;
+            margin-left:   60px;
+
+            border-top:    3px solid grey;
+            border-bottom: 3px solid grey;
+          }
+
+#logo_text {
+              margin-top:    0px;
+              margin-bottom: 0px;
+              margin-left:   27px;
+
+              font-family:   calibri;
+              font-size:     26px;
+           }
+
+
+
+.nav_btn {
+            background-color: rgba(54, 121, 247, 1);
+            color:            white;
+
+            border-width:     0px;
+
+            margin-bottom: 15px;
+            margin-left:   8px;
+            margin-right:  8px;
+
+            font-size:    15px;
+         }
+
+.nav_btn:hover {
+                  background-color: rgba(9, 87, 232, 1);
+               }
+
+#home_btn {
+            margin-left: 60px;
+          }
+
+
+
+#search_bar {
+                margin-left: 50px;
+
+                width: 350px;
+                height: 20px;
+
+                font-size: 15px;
+            }
+
+#search_btn {
+              margin-left:   -15px;
+              margin-bottom: -7px;
+
+              height:        25.1px;
+            }
+
+#search_btn:hover {
+                    src: url("Media/ConWiki/search_btn_hover.png");
+                  }
+
+
+
+
+
+/* ===================== Right of screen ===================== */
+#def {
+        margin-top:   160px;
+        margin-right: 10px;
+
+        font-size: 14px;
+     }

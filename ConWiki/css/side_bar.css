@@ -1,0 +1,55 @@
+/* --------------------- logo div -------------------------- */
+#side_logo_text {
+                  font-family:   calibri;
+                  font-size:     20px;
+
+                  margin-top:  -5px;
+                  margin-left: 13px;
+                }
+
+#side_logo {
+              height: 80px;
+              width: auto;
+
+              margin-left: 0px;
+           }
+
+#side_logo_div {
+                  margin-bottom: 50px;
+               }
+
+#side_bar {
+             height: 100vh;
+             width:  220px;
+
+             border-right: 3px solid grey;
+             height: 100vh;
+           }
+
+/* --------------------- outer divs -------------------------- */
+.nav_h {
+          font-weight: normal;
+
+          width: 80px;
+
+          border-bottom: 1px solid black;
+          padding-bottom: 5px;
+       }
+
+
+#side_nav {
+            padding-left: 12px;
+          }
+
+
+#project_h {
+              width: 60px;
+           }
+
+
+
+
+
+a {
+    text-decoration: none;
+  }
