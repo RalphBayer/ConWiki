@@ -1,3 +1,7 @@
+body {
+      overflow: hidden;
+     }
+
 /* ################################ Sidebar section of screen ################################ */
 #sidebar {
          width:  200px;
