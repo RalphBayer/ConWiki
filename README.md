@@ -37,3 +37,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Acknowledgments
 1. RalphBayer@protonmail.com
 2. Anyone contributing to the code (look at code for acknowledgments).
+
+## TO-DO
+1. Add functionality to buttons
+2. Save users article on creation
+3. Load article when user wants to access it
+4. Get search bar to work
+5. Add styling guide to this repo's wiki
