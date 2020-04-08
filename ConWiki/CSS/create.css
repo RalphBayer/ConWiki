@@ -1,0 +1,81 @@
+/* ################################ Sidebar section of screen ################################ */
+#sidebar {
+         width:  200px;
+         height: 650px;
+
+         padding-right: -100px;
+
+         border:        0;
+         border-right:  2px solid grey;
+         border-radius: 15px;
+
+         overflow: scroll;
+       }
+
+/* ################################ Top section of screen ################################ */
+#text_creation {
+                  width: 1100px;
+               }
+
+#topbar {
+            border: 0;
+
+          margin-left: 750px;
+          margin-bottom: -70px;
+          margin-top: -80px;
+        }
+
+.top {
+        border-bottom: 1px solid grey;
+     }
+
+h1 {
+      width: 250px;
+
+      font-family: calibri;
+      font-weight: normal;
+   }
+
+/* ################################ Text area section of screen ################################ */
+#title_n_text {
+                width: 655px;
+
+                margin-top: 20px;
+                margin-left: 30px;
+              }
+
+textarea {
+           resize: none;
+
+           font-family: calibri;
+        }
+
+#title {
+         font-size:   20px;
+       }
+
+#text_sidebar {
+                margin-top: 20px;
+                margin-right: 70px;
+              }
+
+button {
+         width: 80px;
+         height: 40px;
+
+         margin-top: 10px;
+
+         background-color: rgba(54, 121, 247, 1);
+         color:            white;
+
+         border: 0;
+       }
+
+button:hover {
+               background-color: rgba(9, 87, 232, 1);
+             }
+
+#save_btn {
+            margin-left: 60px;
+            margin-right: 40px;
+          }

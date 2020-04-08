@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Create</title>
+
+    <link rel="stylesheet" href="../CSS/default_layout.css">
+    <link rel="stylesheet" href="../CSS/create.css">
+  </head>
+
+  <body>
+      <!-- ########################## Left side of screen  ########################## -->
+      <div class="left">
+        <iframe src="sidebar.html" scrolling="no" id="sidebar"></iframe>
+      </div>
+
+      <!-- ########################## Right side of screen  ########################## -->
+      <div class="right" id="text_creation">
+
+        <div class="top">
+          <h1>ConWiki: Create</h1>
+          <iframe src="topbar.html" scrolling="no" id="topbar"></iframe>
+        </div>
+
+        <!-- ########################## Text box & title  ########################## -->
+        <div class="left" id="title_n_text">
+          <textarea id="title" rows="1" cols="70" placeholder="Title..."></textarea>
+          <textarea id="text" rows="28" cols="105"></textarea>
+        </div>
+
+        <!-- ########################## Article right side bar  ########################## -->
+        <div class="right">
+          <textarea id="text_sidebar" rows="27" cols="50"></textarea>
+
+          <div id="btn_div">
+            <button type="button" id="save_btn">Save</button>
+            <button type="button" id="view_btn">View</button>
+          </div>
+        </div>
+      </div>
+  </body>
+</html>

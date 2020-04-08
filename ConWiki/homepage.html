@@ -1,59 +1,55 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
   <head>
-    <title> ConWiki </title>
+    <title>ConWiki</title>
 
-    <link rel="stylesheet" href="css/3_screen_split.css">
-    <link rel="stylesheet" href="css/homepage.css">
-
-    <script type="text/javascript" src="javascript/homepage.js"></script>
+    <link rel="stylesheet" href="CSS/default_layout.css">
+    <link rel="stylesheet" href="CSS/homepage.css">
   </head>
 
   <body>
-
-    <!-- ===================== left of screen ===================== -->
+    <!-- #################### Left of screen (side bar) ####################-->
     <div class="left">
-      <iframe src="html/side_bar.html" id="side_bar_iframe" scrolling="no"></iframe>
+      <iframe src="HTML/sidebar.html" scrolling="no"></iframe>
     </div>
 
-    <!-- ==================== right of screen ==================== -->
+    <!-- #################### Right of screen (logo and def) ####################-->
     <div class="right">
-      <pre id="def">
-        <b> ConWiki </b>
-         /'k&#594n.w&#618ki/ <!-- Spells conlang phoneticaly -->
 
-        <i> noun </i>
-        <text style="color:grey"> noun: <b>ConWiki</b>; </text>
+      <!-- #################### ConWiki logo ####################-->
+      <div class="left" id="rightl">
+        <div id="logo_div">
+          <img src="Media/ConWiki/logo.png" id="logo">
+          <p id="logo_text"> A world builder's friend </p>
+        </div>
 
-            1.  A website for nerds to create fictional
-                world, peoples, cultures and languages
-                for the mere amusement of it all.
-      </pre>
-    </div>
+        <div id="nav">
+          <a href="homepage.html"><button id="home_btn" class="nav_btn"> Home </button></a>
+          <a href="html/help.html"><button id="help_btn" class="nav_btn"> Help </button></a>
+          <a href="html/about.html"><button id="about_btn" class="nav_btn"> About </button></a>
+          <a href="html/create.html"><button id="create_btn" class="nav_btn"> Create </button></a>
 
-    <!-- =================== Center of screen =================== -->
-    <div class="center">
-
-      <!-- Logo -->
-      <div id="logo_div">
-        <img src="Media/ConWiki/logo.png" id="logo">
-        <p id="logo_text"> A world builder's friend </p>
+          <input type="text" placeholder="Search..." id="search_bar">
+          <img src="Media/ConWiki/search_btn_unhover.png" id="search_btn"
+               onmouseover='this.src="Media/ConWiki/search_btn_hover.png"'
+               onmouseout='this.src="Media/ConWiki/search_btn_unhover.png"'>
+        </div>
       </div>
 
-      <!-- Navigation -->
-      <div id="nav">
-        <a href="homepage.html" target="_blank"><button id="home_btn" class="nav_btn"> Home </button></a>
-        <a href="html/help.html" target="_blank"><button id="help_btn" class="nav_btn"> Help </button></a>
-        <a href="html/about.html" target="_blank"><button id="about_btn" class="nav_btn"> About </button></a>
-        <a href="html/create.html" target="_blank"><button id="create_btn" class="nav_btn"> Create </button></a>
+      <!-- #################### ConWiki definition ####################-->
+      <div class="right" id="definition">
+        <pre>
+          <b> ConWiki </b>
+           /'k&#594n.w&#618ki/ <!-- Spells conlang phoneticaly -->
 
-        <input type="text" placeholder="Search.." id="search_bar">
-        <img src="Media/ConWiki/search_btn_unhover.png" id="search_btn"
-            onmouseover='this.src="Media/ConWiki/search_btn_hover.png"'
-            onmouseout='this.src="Media/ConWiki/search_btn_unhover.png"'>
+          <i> noun </i>
+          <text style="color:grey"> noun: <b>ConWiki</b>; </text>
+
+              1.  A website for nerds to create fictional
+                  world, peoples, cultures and languages
+                  for the mere amusement of it all.
+        </pre>
       </div>
     </div>
   </body>
-
 </html>
