@@ -36,7 +36,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 1. RalphBayer@protonmail.com
-2. Anyone contributing to the code (look at code for acknowledgments).
+2. LucasLarson (Fixed links in iframe; Spelling correction)
 
 ## TO-DO
 1. Add functionality to buttons
