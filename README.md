@@ -37,6 +37,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Acknowledgments
 1. RalphBayer@protonmail.com
 2. LucasLarson (Fixed links in iframe; Spelling correction)
+3. Daniel Reynold/CamelCaseCo (phonemic transcription and comment correction) 
 
 ## TO-DO
 1. Add functionality to buttons
