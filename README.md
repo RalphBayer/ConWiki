@@ -9,11 +9,12 @@ A free, private, PC hosted Wiki for world building, conlanging and other nerdy p
 First you need to install Python wich is a programming langauge. Go to python.org and download python 3.8.2 for your operating system (windows, mac, linux).
 
 You will then need to open a terminal. 
-. windows: click the windows button and type cmd and then enter.
-. mac    : press Command+spacebar to launch Spotlight and type "Terminal," then double-click the search result.
-. linux  : press Ctrl+Alt+T in Ubuntu, or press Alt+F2, type in gnome-terminal, and press enter.
+1. windows: click the windows button and type cmd and then enter.
+2. mac    : press Command+spacebar to launch Spotlight and type "Terminal," then double-click the search result.
+3. linux  : press Ctrl+Alt+T in Ubuntu, or press Alt+F2, type in gnome-terminal, and press enter.
 
 Then you will need to do a python install of Flask using pip.
+
 Type: pip install flask
 
 Download this github repository to any place you can accsess on your computure and unzip all the files. Then keep going throught the unziped folders untill you reach a file called start.bat. Once you find it, double click on it 
