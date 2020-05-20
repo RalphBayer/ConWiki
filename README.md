@@ -6,16 +6,23 @@ A free, private, PC hosted Wiki for world building, conlanging and other nerdy p
 ## Getting started
 
 ### Installation
-Currently, the only way to install this is through git or github.com. Click on 'Clone or Download' and then 
-download the files however you want. Place the downloaded (and unzipped) files in a location easily accessible 
-on your PC.
+First you need to install Python wich is a programming langauge. Go to python.org and download python 3.8.2 for your operating system (windows, mac, linux).
+
+You will then need to open a terminal. 
+. windows: click the windows button and type cmd and then enter.
+. mac    : press Command+spacebar to launch Spotlight and type "Terminal," then double-click the search result.
+. linux  : press Ctrl+Alt+T in Ubuntu, or press Alt+F2, type in gnome-terminal, and press enter.
+
+Then you will need to do a python install of Flask using pip.
+Type: pip install flask
+
+Download this github repository to any place you can accsess on your computure and unzip all the files. Then keep going throught the unziped folders untill you reach a file called start.bat. Once you find it, double click on it 
   
 ### How To use
 At the moment ConWiki is in it's early days of construction so there is very limited functionality.
 However, to open a webpage and use ConWiki, go to the location you have saved the files and double click on
-homepage.html every time you want to use ConWiki. Optionally, you can open any browser you use, then drag
-and drop homepage.html into said browser. (NOTE: ConWiki has only been tested for google and firefox at the moment,
-layout or text could look a little odd).
+start.bat every time you want to use ConWiki. (NOTE: ConWiki has only been tested for google and firefox at the moment,
+layout or text could look a little odd. If you use another browser then please let me know how it looks for you.).
 
 ---
 
