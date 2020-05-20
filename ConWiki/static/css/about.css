@@ -1,0 +1,32 @@
+/* ########################### NEEDED TO FIX TOPBAR ###########################*/
+#topbar_div {
+              margin-left: 30px;
+            }
+
+/* ############################### ABOUT SECTION ############################### */
+.right {
+          width: 1100px;
+       }
+
+.about_h1 {
+            font-weight: normal;
+            font-family: calibri;
+
+            padding-right: 865px;
+          }
+
+#about_text {
+              margin-top: 130px;
+            }
+
+.about_pre {
+      font-family : calibri;
+      font-size   : 18px;
+      word-spacing: 1px;
+    }
+
+.about_a {
+    color: blue;
+
+    text-decoration: none;
+  }

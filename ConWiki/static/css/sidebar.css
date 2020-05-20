@@ -1,0 +1,53 @@
+/* Top of sidebar */
+
+#top {
+      margin-bottom: 50px;
+    }
+
+.sidebar_img {
+      width : auto;
+      height: 70px;
+
+      margin-left: -5px;
+    }
+
+.sidebar_p {
+      font-family: calibri;
+      font-size  : 18px;
+
+      margin-top:  -5px;
+  }
+
+
+/* Navigation for sidebar */
+.sidebar_h4 {
+      font-family: calibri;
+      font-weight: normal;
+
+      text-align: center;
+
+      border-bottom: 1px solid grey;
+
+      margin-bottom: 5px;
+   }
+
+.sidebar_a {
+      color: blue;
+
+      font-family    : calibri;
+      text-decoration: none;
+
+      margin-left: 20px;
+  }
+
+.sidebar_pre {
+      font-family: calibri;
+    }
+
+#page_nav {
+            margin-right: 30px;
+          }
+
+#article_nav {
+                margin-right: 40px;
+             }

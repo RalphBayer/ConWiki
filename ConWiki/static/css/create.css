@@ -1,0 +1,65 @@
+/* ########################### NEEDED TO FIX TOPBAR ###########################*/
+
+#topbar_div {
+               margin-left: 293px;
+               margin-top : -650px;
+            }
+
+/* ################################ Text area section of screen ################################ */
+body {
+        overflow: hidden;
+     }
+
+#text_creation {
+                  margin-left: 263px;
+                  margin-top : 10px;
+
+                  /* A bit of a quick hack but I can't position the div nicely otherwise */
+                  position: absolute;
+                  top     : 100px;
+               }
+
+
+.create_textarea {
+                     resize: none;
+
+                     font-family: calibri;
+                 }
+
+#title_n_text {
+                 margin-left: 30px;
+                 margin-top : 20px;
+
+                 width: 630px;
+              }
+
+
+#title {
+          font-size:   20px;
+       }
+
+#text_sidebar {
+                 margin-left : 50px;
+                 margin-top  : 20px;
+              }
+
+.create_button {
+                  width : 80px;
+                  height: 40px;
+
+                  margin-top: 10px;
+
+                  background-color: rgba(54, 121, 247, 1);
+                  color           : white;
+
+                  border: 0;
+               }
+
+.create_button:hover {
+                        background-color: rgba(9, 87, 232, 1);
+                     }
+
+#save_btn {
+             margin-left : 140px;
+             margin-right: 10px;
+          }

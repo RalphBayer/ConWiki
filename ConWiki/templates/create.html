@@ -1,0 +1,35 @@
+{% extends "topbar.html" %}
+
+{% block title %}
+  <title>ConWiki: Create</title>
+{% endblock %}
+
+{% block page_styles %}
+  <link rel="stylesheet" href="{{url_for('static', filename='css/create.css')}}">
+{% endblock %}
+
+
+
+{% block page_title %}
+  <h1 class="create_h1">ConWiki: Create</h1>
+{% endblock %}
+
+{% block page_main %}
+  <div id="text_creation">
+    <!-- ########################## Text box & title  ########################## -->
+    <div class="left" id="title_n_text">
+      <textarea class="create_textarea" id="title" rows="1" cols="70" placeholder="Title..."></textarea>
+      <textarea class="create_textarea" id="text" rows="28" cols="105"></textarea>
+    </div>
+
+    <!-- ########################## Article right side bar  ########################## -->
+    <div class="right">
+      <textarea class="create_textarea" id="text_sidebar" rows="27" cols="50"></textarea>
+
+      <div id="btn_div">
+        <button class="create_button" type="button" id="save_btn">Save</button>
+        <button class="create_button" type="button" id="view_btn">View</button>
+      </div>
+    </div>
+  </div>
+{% endblock %}

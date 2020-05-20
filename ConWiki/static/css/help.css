@@ -1,0 +1,48 @@
+/* ########################### NEEDED TO FIX TOPBAR ###########################*/
+
+#topbar_div {
+              margin-left: 293px;
+              margin-top : -650px;
+            }
+
+/* ############################### HELP SECTION ############################### */
+
+#help_section {
+                margin-left: 250px;
+                margin-top : 20px;
+
+                /* A bit of a quick hack but I can't position the div nicely otherwise */
+                position: absolute;
+                top     : 100px;
+              }
+
+#left_help {
+             margin-left: 25px;
+           }
+
+#right_help {
+              margin-right: 30px;
+            }
+
+.help_h1 {
+            font-weight: normal;
+         }
+
+.help_h2 {
+            margin-left: 16px;
+
+            border-bottom: 1px solid grey;
+
+            width: 365px;
+         }
+
+.help_pre {
+            font-family: calibri;
+            font-size  : 17px;
+          }
+
+.help_a {
+          color: blue;
+
+          text-decoration: none;
+        }

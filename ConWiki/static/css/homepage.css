@@ -1,0 +1,82 @@
+body {
+      overflow: hidden;
+     }
+
+/* ############################ Logo div ############################ */
+#rightl {
+          width: 400px;
+        }
+
+#logo_div {
+            margin-top:   150px;
+
+            border-top   : 2px solid grey;
+            border-bottom: 2px solid grey;
+
+            width: 400px;
+
+            text-align: center;
+          }
+
+#logo {
+        margin-top: 5px;
+      }
+
+.homepage_p {
+    font-family: calibri;
+    font-size  : 20px;
+
+    margin-top   : 0px;
+    margin-bottom: 5px;
+  }
+
+
+/* ############################ Navigation div ############################ */
+#nav {
+        width: 500px;
+     }
+
+.homepage_button {
+          background-color: rgba(54, 121, 247, 1);
+          color           : white;
+
+          margin-top   : 5px;
+          margin-bottom: 20px;
+          margin-right : 8px;
+          margin-left  : 8px;
+
+          border-width: 0px;
+          width       : 80px;
+
+          font-size:    15px;
+       }
+
+.homepage_button:hover {
+                background-color: rgba(9, 87, 232, 1);
+             }
+
+#home_btn {
+            margin-left: 12px;
+          }
+
+#search_bar {
+              width : 350px;
+              height: 20px;
+
+              font-size: 15px;
+            }
+
+#search_btn {
+              margin-bottom: -7px;
+              margin-left  : -7px;
+
+              height: 25.1px;
+            }
+
+/* ############################ Navigation div ############################ */
+#definition {
+              margin-top  : 180px;
+              margin-right: 80px;
+
+              font-size: 14px;
+            }

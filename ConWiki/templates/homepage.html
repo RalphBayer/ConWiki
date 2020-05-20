@@ -1,0 +1,48 @@
+{% extends "sidebar.html" %}
+
+{% block title %}
+  <title>ConWiki: Home</title>
+{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{{url_for('static', filename='css/homepage.css')}}">
+{% endblock %}
+
+{% block main %}
+    <!-- #################### Right left of the screen ####################-->
+    <div class="left">
+      <!-- The logo for the page -->
+      <div id="logo_div">
+        <img class="homepage_img" src="{{url_for('static', filename='img/conwiki/logo.png')}}" id="logo">
+        <p class="homepage_p" id="logo_text"> A world builder's friend </p>
+      </div>
+
+      <!-- Some simple navigation -->
+      <div id="nav">
+        <a class="homepage_a" href="homepage.html"><button class="homepage_button"  id="home_btn" class="nav_btn"> Home </button></a>
+        <a class="homepage_a" href="help.html"><button class="homepage_button"  id="help_btn" class="nav_btn"> Help </button></a>
+        <a class="homepage_a" href="about.html"><button class="homepage_button"  id="about_btn" class="nav_btn"> About </button></a>
+        <a class="homepage_a" href="create.html"><button class="homepage_button"  id="create_btn" class="nav_btn"> Create </button></a>
+
+        <input class="homepage_input" type="text" placeholder="Search..." id="search_bar">
+        <img class="homepage_img" src="{{url_for('static', filename='img/conwiki/search_btn_unhover.png')}}" id="search_btn"
+             onmouseover=this.src="{{url_for('static', filename='img/conwiki/search_btn_hover.png')}}"
+             onmouseout=this.src="{{url_for('static', filename='img/conwiki/search_btn_unhover.png')}}">
+      </div>
+    </div>
+
+    <!-- #################### Right right of the screen ####################-->
+    <div class="right">
+      <pre class="homepage_pre" id=definition>
+        <b> ConWiki </b>
+         /'k&#594n.w&#618.ki/ <!-- Spells conwiki phoneticaly -->
+
+        <i> noun </i>
+        <text style="color:grey"> noun: <b>ConWiki</b>; </text>
+
+            1.  A website for nerds to create fictional
+                world, peoples, cultures and languages
+                for the mere amusement of it all.
+      </pre>
+    </div>
+{% endblock %}

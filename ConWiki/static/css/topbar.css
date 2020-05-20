@@ -1,0 +1,42 @@
+#topbar_div {
+              width: auto;
+
+              border-bottom: 1px solid grey;
+
+              float: right;
+            }
+
+#topbar_nav {
+              margin-left: 800px;
+              margin-top : -50px;
+            }
+
+.topbar_img {
+      margin-bottom: -6.1px;
+      margin-right : -7px;
+
+      height: 21px;
+    }
+
+#edit_btn {
+            margin-left: 20px;
+          }
+
+.topbar_button {
+          background-color: rgba(54, 121, 247, 1);
+          color           : white;
+
+          margin-top   : 5px;
+          margin-bottom: 20px;
+          margin-right : 8px;
+          margin-left  : 8px;
+
+          border-width: 0px;
+          width       : 80px;
+
+          font-size: 15px;
+       }
+
+.topbar_button:hover {
+                background-color: rgba(9, 87, 232, 1);
+             }
