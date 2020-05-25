@@ -27,9 +27,45 @@
       <textarea class="create_textarea" id="text_sidebar" rows="27" cols="50"></textarea>
 
       <div id="btn_div">
-        <button class="create_button" type="button" id="save_btn">Save</button>
-        <button class="create_button" type="button" id="view_btn">View</button>
+        <button class="create_button" id="save_btn" type="button" name="button" onclick="save_article();">Save</button>
+        <button class="create_button" id="view_btn" type="button" name="button" onclick="console.log('Viewing article!');">View</button>
       </div>
     </div>
   </div>
 {% endblock %}
+
+{% block scripts %}
+    <script>
+      function save_article()
+      {
+        var title        = document.getElementById("title")
+        var text         = document.getElementById("text")
+        var text_sidebar = document.getElementById("text_sidebar")
+
+        if(title.value.trim().length < 1)
+        {
+            alert("This article must have a title!")
+            return 0
+        }
+
+        var entry = {
+                        title: title.value,
+                        text: text.value,
+                        text_sidebar: text_sidebar.value
+                    }
+
+        fetch('http://127.0.0.1:5000/create.html/post_json',
+              {
+                method: 'POST',
+                credentials: 'include',
+                body: JSON.stringify(entry),
+                cache: 'no-cache',
+                headers: new Headers({
+                                      "content-type": "application/json"
+                                    })
+              }
+             )
+      }
+    </script>
+{% endblock %}
+
