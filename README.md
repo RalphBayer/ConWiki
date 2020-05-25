@@ -25,6 +25,8 @@ However, to open a webpage and use ConWiki, go to the location you have saved th
 start.bat every time you want to use ConWiki. (NOTE: ConWiki has only been tested for google and firefox at the moment,
 layout or text could look a little odd. If you use another browser then please let me know how it looks for you.).
 
+The webpage that gets automatically opened might not be responding when it first gets opened. If so then just keep refreshing the page and in a couple of seconds it should start working.
+
 ---
 
 ## Contribution
@@ -48,8 +50,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 3. Daniel Reynold/CamelCaseCo (phonemic transcription and comment correction) 
 
 ## TO-DO
-1. Add functionality to buttons
-2. Save users article on creation
+1. Add more markup commands to the lexer class in article_manager.py
+2. Get search bar to work
 3. Load article when user wants to access it
-4. Get search bar to work
-5. Add styling guide to this repo's wiki
+4. Add markup styling guide to this repo's wiki
