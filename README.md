@@ -15,7 +15,7 @@ You will then need to open a terminal.
 
 Then you will need to do a python install of Flask using pip.
 
-Type: pip install flask
+Type: pip3 install flask
 
 Download this github repository to any place you can accsess on your computure and unzip all the files. Then keep going throught the unziped folders untill you reach a file called start.bat. Once you find it, double click on it 
   
@@ -51,6 +51,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## TO-DO
 1. Add more markup commands to the lexer class in article_manager.py
-2. Get search bar to work
-3. Load article when user wants to access it
+2. Get view and edit button working
 4. Add markup styling guide to this repo's wiki
