@@ -1,34 +1,48 @@
+form {
+         width: 100%;
+     }
+
 input {
           width: 20%;
 
           margin-left: 70%;
       }
 
-img {
-        width: 4.5%;
+#search_btn {
+                margin-left: -1%;
 
-        margin-left: -5px;
-        margin-bottom: -6px;
-    }
+                padding: 0px 0px;
 
-button {
-            width: 30%;
+                border : none;
+                outline: none;
 
-            margin-left: 7%;
+                background-color: Transparent;
+            }
 
-            border       : 1px solid rgb(0, 139, 209);
-            border-radius: 4px;
+#search_btn_image {
+                      width : 79%;
 
-            background-color: rgb(0, 139, 209);
+                      margin-bottom: -6px;
+                  }
 
-            color: white;
-       }
+.nav_btn {
+             width: 30%;
 
-button:hover {
-                  border: 1px solid rgb(0, 151, 227);
+             margin-left: 7%;
 
-                  background-color: rgb(0, 151, 227);
-             }
+             border       : 1px solid rgb(0, 139, 209);
+             border-radius: 4px;
+
+             background-color: rgb(0, 139, 209);
+
+             color: white;
+         }
+
+.nav_btn:hover {
+                   border: 1px solid rgb(0, 151, 227);
+
+                   background-color: rgb(0, 151, 227);
+               }
 
 #button-nav {
                 margin-left: 70%;
