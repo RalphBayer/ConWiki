@@ -1,32 +1,14 @@
-/* ########################### NEEDED TO FIX TOPBAR ###########################*/
-#topbar_div {
-              margin-left: 30px;
-            }
+pre {
+        margin-top : 30px;
+        margin-left: -15.5%;
 
-/* ############################### ABOUT SECTION ############################### */
-.right {
-          width: 1100px;
-       }
-
-.about_h1 {
-            font-weight: normal;
-            font-family: calibri;
-
-            padding-right: 865px;
-          }
-
-#about_text {
-              margin-top: 130px;
-            }
-
-.about_pre {
-      font-family : calibri;
-      font-size   : 18px;
-      word-spacing: 1px;
+        font-family: calibri;
+        font-size  : 18px;
     }
 
-.about_a {
-    color: blue;
+#title {
+           margin-left: 50px;
+           margin-top : -5.5%;
 
-    text-decoration: none;
-  }
+           font-family: calibri;
+       }

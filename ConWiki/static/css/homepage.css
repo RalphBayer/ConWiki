@@ -1,82 +1,81 @@
-body {
-      overflow: hidden;
-     }
-
-/* ############################ Logo div ############################ */
-#rightl {
-          width: 400px;
-        }
-
-#logo_div {
-            margin-top:   150px;
-
-            border-top   : 2px solid grey;
-            border-bottom: 2px solid grey;
-
-            width: 400px;
-
-            text-align: center;
-          }
-
-#logo {
-        margin-top: 5px;
-      }
-
-.homepage_p {
-    font-family: calibri;
-    font-size  : 20px;
-
-    margin-top   : 0px;
-    margin-bottom: 5px;
+p {
+      font-family: calibri;
+      font-size  : 130%;
   }
 
-
-/* ############################ Navigation div ############################ */
-#nav {
-        width: 500px;
+form {
+         width: 100%;
      }
 
-.homepage_button {
-          background-color: rgba(54, 121, 247, 1);
-          color           : white;
+input {
+          width: 68%;
+      }
 
-          margin-top   : 5px;
-          margin-bottom: 20px;
-          margin-right : 8px;
-          margin-left  : 8px;
-
-          border-width: 0px;
-          width       : 80px;
-
-          font-size:    15px;
-       }
-
-.homepage_button:hover {
-                background-color: rgba(9, 87, 232, 1);
+#page_center {
+                 margin-left: 20px;
              }
 
-#home_btn {
-            margin-left: 12px;
+#logo_div {
+              width: 60%;
+
+              margin-left  : 30%;
+              margin-top   : 20%;
+              margin-bottom: 2%;
+
+              padding-left: 13%;
+              padding-top : 2%;
+
+              border-top   : 2px solid grey;
+              border-bottom: 2px solid grey;
           }
 
-#search_bar {
-              width : 350px;
-              height: 20px;
+#nav {
+          margin-left: 31%;
+     }
 
-              font-size: 15px;
-            }
+#conwiki_def {
+                  margin-left  : 63%;
+                  margin-top   : -18%;
+             }
+
+#moto {
+          margin-left: 6%;
+      }
 
 #search_btn {
-              margin-bottom: -7px;
-              margin-left  : -7px;
+                height: 100%;
 
-              height: 25.1px;
+                margin-left: -1.5%;
+
+                padding: 0px 0px;
+
+                border : none;
+                outline: none;
             }
 
-/* ############################ Navigation div ############################ */
-#definition {
-              margin-top  : 180px;
-              margin-right: 80px;
+#search_btn_image {
+                      height: 100%;
 
-              font-size: 14px;
-            }
+                      margin-top: -4px;
+                  }
+
+
+.nav_btn {
+            width: 80%;
+
+            margin-right : 12vh;
+            margin-bottom: 18px;
+
+            border       : 1px solid rgb(0, 139, 209);
+            border-radius: 4px;
+
+            background-color: rgb(0, 139, 209);
+
+            color: white;
+         }
+
+.nav_btn:hover {
+                   border: 1px solid rgb(0, 151, 227);
+
+                   background-color: rgb(0, 151, 227);
+               }

@@ -1,0 +1,28 @@
+{% extends 'base_layout.html' %}
+
+{% block title %} <title> ConWiki: {{ name }} </title> {% endblock %}
+{% block style_n_scripts %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/article.css') }}">
+{% endblock %}
+
+
+{% block main %}
+    <div class="row">
+        <iframe
+               src="{{ iframe_src.topbar }}" width="100%" height="80px" scrolling="no"
+               style="border: none; border-bottom: 1px grey solid; margin-left: 30px;">
+        </iframe>
+
+        <h1 id="page-title"> ConWiki: {{ name }} </h1>
+    </div>
+
+    <div class="row" id="article">
+        <div class="col-7 col-sm-7 col-md-7" id="main_html">
+            {{ gen_html.main_html | safe }}
+        </div>
+
+        <div class="col-5 col-sm-5 col-md-5" id="side_html">
+            {{ gen_html.side_html | safe }}
+        </div>
+    </div>
+{% endblock %}

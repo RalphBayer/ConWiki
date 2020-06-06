@@ -1,24 +1,20 @@
-{% extends "sidebar.html" %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./static/css/topbar.css">
+    </head>
 
-{% block styles %}
-    <link rel="stylesheet" href="{{url_for('static', filename='css/topbar.css')}}">
-    {% block page_styles %}{% endblock %}
-{% endblock %}
+    <body>
+        <div class="row">
+            <input type="text" placeholder="Search...">
+            <img src="./static/images/search_btn_hover.png" id="search_btn"
+                 onmouseover="this.src='./static/images/search_btn_unhover.png'"
+                 onmouseout="this.src='./static/images/search_btn_hover.png'">
+        </div>
 
-{% block main %}
-  <div id="topbar_div">
-    {% block page_title %}{% endblock %}
-
-    <div id="topbar_nav">
-      <input class="topbar_input" type="text" placeholder="Search..." id="search_bar">
-      <img class="topbar_img" src="{{url_for('static', filename='img/conwiki/search_btn_unhover.png')}}" id="search_btn"
-      onmouseover=this.src="{{url_for('static', filename='img/conwiki/search_btn_hover.png')}}"
-      onmouseout=this.src="{{url_for('static', filename='img/conwiki/search_btn_unhover.png')}}">
-
-      <button class="topbar_button" type="button" id="edit_btn">Edit</button>
-      <a class="topbar_a" href="create.html" target="_parent"><button class="topbar_button" type="button" id="create_btn">Create</button></a>
-    </div>
-  </div>
-
-  {% block page_main %}{% endblock %}
-{% endblock %}
+        <div class="row" id="button-nav">
+            <a href="http://127.0.0.1:5000/create"><button> Create </button></a>
+            <a href="http://127.0.0.1:5000/edit"><button> Edit </button></a>
+        </div>
+    </body>
+</html>

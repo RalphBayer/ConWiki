@@ -1,48 +1,53 @@
-{% extends "sidebar.html" %}
+{% extends "base_layout.html" %}
 
-{% block title %}
-  <title>ConWiki: Home</title>
+{% block title %} <title> ConWiki: Homepage </title> {% endblock %}
+{% block style_n_scripts %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/homepage.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/article_handler.js') }}"></script>
 {% endblock %}
 
-{% block styles %}
-    <link rel="stylesheet" href="{{url_for('static', filename='css/homepage.css')}}">
-{% endblock %}
 
 {% block main %}
-    <!-- #################### Right left of the screen ####################-->
-    <div class="left">
-      <!-- The logo for the page -->
-      <div id="logo_div">
-        <img class="homepage_img" src="{{url_for('static', filename='img/conwiki/logo.png')}}" id="logo">
-        <p class="homepage_p" id="logo_text"> A world builder's friend </p>
-      </div>
+    <div class="col-7 col-sm-7 col-md-7" id="page_center">
+        <div class="row" id="logo_div">
+            <img src="{{url_for('static', filename='images/logo.png')}}" alt="ConWiki logo" width="70%"">
+            <p id="moto"> A world builder's friend </p>
+        </div>
 
-      <!-- Some simple navigation -->
-      <div id="nav">
-        <a class="homepage_a" href="homepage.html"><button class="homepage_button"  id="home_btn" class="nav_btn"> Home </button></a>
-        <a class="homepage_a" href="help.html"><button class="homepage_button"  id="help_btn" class="nav_btn"> Help </button></a>
-        <a class="homepage_a" href="about.html"><button class="homepage_button"  id="about_btn" class="nav_btn"> About </button></a>
-        <a class="homepage_a" href="create.html"><button class="homepage_button"  id="create_btn" class="nav_btn"> Create </button></a>
+        <div class="row" id="nav">
+            <a href="http://127.0.0.1:5000/about"><button class="nav_btn"> About </button></a>
+            <a href="http://127.0.0.1:5000/create"><button class="nav_btn"> Create </button></a>
+            <a href="http://127.0.0.1:5000/help"><button class="nav_btn"> Help </button></a>
 
-        <input class="homepage_input" type="text" placeholder="Search..." id="search_bar">
-        <img class="homepage_img" src="{{url_for('static', filename='img/conwiki/search_btn_unhover.png')}}" id="search_btn"
-             onmouseover=this.src="{{url_for('static', filename='img/conwiki/search_btn_hover.png')}}"
-             onmouseout=this.src="{{url_for('static', filename='img/conwiki/search_btn_unhover.png')}}">
-      </div>
+            <form method="post" action="{{url_for('load_article_html')}}">
+                <input id="searchbar" name="searchbar" placeholder="Search...">
+                <button id="search_btn" type="submit">
+                     <img src="./static/images/search_btn_hover.png" id="search_btn_image"
+                     onmouseover="this.src='./static/images/search_btn_unhover.png'"
+                     onmouseout="this.src='./static/images/search_btn_hover.png'"
+                     onclick="load_article_html()" type="submit">
+                </button>
+            </form>
+        </div>
     </div>
 
-    <!-- #################### Right right of the screen ####################-->
-    <div class="right">
-      <pre class="homepage_pre" id=definition>
-        <b> ConWiki </b>
-         /'k&#594n.w&#618.ki/ <!-- Spells conwiki phoneticaly -->
+    <div id="conwiki_def">
+        <pre>
+<b> ConWiki </b>
+/'k&#594n.w&#618.ki/ <!-- Spells conwiki phoneticaly -->
 
-        <i> noun </i>
-        <text style="color:grey"> noun: <b>ConWiki</b>; </text>
+<i> noun </i>
+<text style="color:grey"> noun: <b>ConWiki</b>; </text>
 
-            1.  A website for nerds to create fictional
-                world, peoples, cultures and languages
-                for the mere amusement of it all.
-      </pre>
+1.  A website for nerds to create fictional
+    world, peoples, cultures and languages
+    for the mere amusement of it all.
+         </pre>
     </div>
 {% endblock %}
+
+
+<!-- TODO:
+            Make the search button change picture on hover.
+            Fix rescalling and bootstrap col for conwiki def.
+-->

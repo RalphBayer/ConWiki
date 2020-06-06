@@ -1,46 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    {% block title %}{% endblock %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/sidebar.css') }}">
+    </head>
 
-    <link rel="stylesheet" href="{{url_for('static', filename='css/default_layout.css')}}">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/sidebar.css')}}">
-    {% block styles %}{% endblock %}
-
-  </head>
-
-  <body>
-    <div class='left'>
-      <div id="sidebar_logo">
-        <!-- #################### Top of side bar ####################-->
-        <div id="top">
-          <img class='sidebar_img' src="{{url_for('static', filename='img/conwiki/logo.png')}}">
-          <p class='sidebar_p'> A world builder's friend </p>
+    <body>
+        <div class="row" id="top">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="ConWiki logo"
+                 style="width: 90%; height: 100%;">
+            <p> A world builder's friend </p>
         </div>
 
-        <!-- #################### ConWiki page navigation ####################-->
-        <div id="page_nav">
-          <h4 class='sidebar_h4'> ConWiki Navigation </h4>
-          <a class='sidebar_a' href="homepage.html" target="_parent"> Home </a>
-          </br>
-          <a class='sidebar_a' href="help.html" target="_parent"> Help </a>
-          </br>
-          <a class='sidebar_a' href="about.html" target="_parent"> About </a>
+        <div class="row" id="page_nav">
+            <h4> Navigation </h4>
 
+            <a href="http://127.0.0.1:5000/homepage" target="_parent"> Home </a>
+            </br>
+            <a href="http://127.0.0.1:5000/help" target="_parent"> Help </a>
+            </br>
+            <a href="http://127.0.0.1:5000/about" target="_parent"> About </a>
         </div>
 
-        <!-- #################### Article navigation ####################-->
-        <div id="article_nav">
-          <h4 class='sidebar_h4'> Article Navigation </h4>
-          <pre class='sidebar_pre'>
-  Start creating some articles!
-          </pre>
+        <div class="row" id="article_nav">
+            <h4> Articles </h4>
+            <p> Create some articles! </p> <!-- NOTE: add jinja to allow articles to be passed through -->
         </div>
-      </div>
-    </div>
-
-    <div class='right'>
-      {% block main %}{% endblock %}
-    </div>
-  </body>
+    </body>
 </html>

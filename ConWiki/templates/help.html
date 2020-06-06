@@ -1,92 +1,88 @@
-{% extends "topbar.html" %}
+{% extends 'base_layout.html' %}
 
-{% block title %}
-  <title>ConWiki: Help</title>
-{% endblock %}
-
-{% block page_styles %}
-  <link rel="stylesheet" href="{{url_for('static', filename='css/help.css')}}">
+{% block title %} <title> ConWiki: Help </title> {% endblock %}
+{% block style_n_scripts %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/help.css') }}">
 {% endblock %}
 
 
-
-{% block page_title %}
-  <h1 class="help_h1"> ConWiki: Help </h1>
-{% endblock %}
-
-{% block page_main %}
-  <!-- ########################## Left side help notes  ########################## -->
-  <div id="help_section">
-    <div class="left" id="left_help">
-      <h2 class="help_h2"> Find An Article </h2>
-      <pre class="help_pre">
-    For searches, there is a search box at the top of every page.
-    Type what you are looking for in the box and ConWiki will try
-    it's best to match your query. Select any page in the list to
-    go to that page. There are other ways to browse and explore
-    ConWiki articles; many of these will be links in one article
-    leading to another.
-      </pre>
-
-      <h2 class="help_h2"> Edit An Article </h2>
-      <pre class="help_pre">
-    To edit an article click the edit button in the bar at the top
-    of any page. Once you click on that button you will be able to
-    change the contents of the article. You will also be able to
-    add style to the article with ConWiki's styling syntax.
-
-      </pre>
-
-      <h2 class="help_h2"> Report A Problem </h2>
-      <pre class="help_pre">
-    If during your time on ConWiki you encounter any problems,
-    you can report them by visiting this <a class="help_a" href="https://github.com/RalphBayer/ConWiki">GitHub page</a>.
-    Once at the site you can open a issue, and I will try to
-    fix it as soon as possible.
-
-    However, you can also try to fix these problems your self by
-    contributing to the code that makes up ConWiki on the same
-    <a class="help_a" href="https://github.com/RalphBayer/ConWiki">GitHub page</a>. Even suggestions or ideas for how to improve
-    ConWiki are always welcome.
-      </pre>
+{% block main %}
+    <div class="row" id="top-navbar">
+        <iframe
+                src="{{ iframe_src.topbar }}" width="100%" height="80px" scrolling="no"
+                style="border: none; border-bottom: 1px grey solid; margin-left: 30px;">
+        </iframe>
     </div>
 
-    <!-- ########################## Right side help notes  ########################## -->
-    <div class="right" id="right_help">
-      <h2 class="help_h2"> Create An Article </h2>
-        <pre class="help_pre">
-    To create an article click the create button in the bar at the top
-    of any page. Once you click on that button ConWiki will ask you
-    for the article's name and where to save the article.
-    Then an empty article will be created (or one containing a template),
-    after that you are free to edit the article as much as you want.
+    <div class="row" id="about">
+        <h1 id="title"> ConWiki: Help </h1>
 
-        </pre>
+        <div class="col-5 col-sm-5 col-md-5" id="left-info">
+            <h2> Find An Article </h2>
+            <p>
+                For searches, there is a search box at the top of every page.
+                Type what you are looking for in the box and ConWiki will try
+                it's best to match your query. Select any page in the list to
+                go to that page. There are other ways to browse and explore
+                ConWiki articles; many of these will be links in one article
+                leading to another.
+            </p>
 
-        <h2 class="help_h2"> Style An Article </h2>
-        <pre class="help_pre">
-    To add style to your article such as: links, images, headings etc.
-    ConWiki has specific keywords to add these. If you already know
-    how styling works in wikipedia then most of the syntax will remain
-    the same. For more help, please visit the <a class="help_a" href="https://github.com/RalphBayer/ConWiki">GitHub page</a>
-    where you will find full documentation for styling.
-        </pre>
+            <h2> Edit An Article </h2>
+            <p>
+                To edit an article click the edit button in the bar at the top
+                of any page. Once you click on that button you will be able to
+                change the contents of the article. You will also be able to
+                add style to the article with ConWiki's styling syntax.
+            </p>
 
-        <h2 class="help_h2"> Navigation On ConWiki </h2>
-        <pre class="help_pre">
-    On every single ConWiki page, there will be a side bar with links to
-    many different parts of ConWiki, your articles and other websites.
-    The side bar is split into 3 main sections: ConWiki, Articles and Tools.
+            <h2> Report A Problem </h2>
+            <p>
+                If during your time on ConWiki you encounter any problems,
+                you can report them by visiting this <a href="https://github.com/RalphBayer/ConWiki">GitHub page</a>.
+                Once at the site you can open a issue, and I will try to
+                fix it as soon as possible.
 
-    ConWiki navigation, contains links to all different parts of ConWiki such as
-    this page and <a class="help_a" href="../homepage.html">home</a>.
+                However, you can also try to fix these problems your-self by
+                contributing to the code that makes up ConWiki on the same
+                <a href="https://github.com/RalphBayer/ConWiki">GitHub page</a>. Even suggestions or ideas for how to improve
+                ConWiki are always welcome.
+            </p>
+        </div>
 
-    Articles, contains folders for all of your articles. These folders might
-    be named: languages, cultures, geography, world or any name you can think of.
+        <div class="col-5 col-sm-5 col-md-5" id="right-info">
+            <h2> Create An Article </h2>
+            <p>
+                To create an article click the create button in the bar at the top
+                of any page. Once you click on that button ConWiki will take you
+                to an article creation page. Then an empty article will be created,
+                after that you are free to edit the article as much as you want.
+                Each article must contain a name to save and load the article later.
+            </p>
 
-    Tools, contains links to other websites or applications that conworlders
-    or conlangers frequenlty use for their creations.
-        </pre>
+            <h2> Style An Article </h2>
+            <p>
+                To add style to your article such as: links, images, headings etc.
+                ConWiki has specific keywords to add these. If you already know
+                how styling works in wikipedia then most of the syntax will remain
+                the same. For more help, please visit the <a href="https://github.com/RalphBayer/ConWiki">GitHub page</a>
+                for more info.
+            </p>
+
+            <h2> Navigation On ConWiki </h2>
+            <p>
+                On every single ConWiki page, there will be a side bar with links to
+                many different parts of ConWiki, your articles and other websites.
+                The side bar is split into 2 main sections: ConWiki, Articles.
+                <br>
+
+                ConWiki navigation, contains links to all different parts of ConWiki such as
+                this page and <a href="http://127.0.0.1:5000/homepage">home</a>.
+                <br>
+
+                Articles, contains files for all of your articles. These files might
+                be for: languages, cultures, geography, world or anything you can think of.
+            </p>
+        </div>
     </div>
-  </div>
 {% endblock %}

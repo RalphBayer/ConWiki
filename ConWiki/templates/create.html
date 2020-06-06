@@ -1,71 +1,37 @@
-{% extends "topbar.html" %}
+{% extends 'base_layout.html' %}
 
-{% block title %}
-  <title>ConWiki: Create</title>
+{% block title %} <title>ConWiki: Create</title> {% endblock %}
+{% block style_n_scripts %}
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/article_handler.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/create.css') }}">
 {% endblock %}
 
-{% block page_styles %}
-  <link rel="stylesheet" href="{{url_for('static', filename='css/create.css')}}">
-{% endblock %}
 
+{% block main %}
+    <div class="row">
+      <iframe
+              src="{{ iframe_src.topbar }}" width="100%" height="80px" scrolling="no"
+              style="border: none; border-bottom: 1px grey solid; margin-left: 30px;">
+      </iframe>
 
-
-{% block page_title %}
-  <h1 class="create_h1">ConWiki: Create</h1>
-{% endblock %}
-
-{% block page_main %}
-  <div id="text_creation">
-    <!-- ########################## Text box & title  ########################## -->
-    <div class="left" id="title_n_text">
-      <textarea class="create_textarea" id="title" rows="1" cols="70" placeholder="Title..."></textarea>
-      <textarea class="create_textarea" id="text" rows="28" cols="105"></textarea>
+      <h1 id="page-title"> ConWiki: Create </h1>
     </div>
 
-    <!-- ########################## Article right side bar  ########################## -->
-    <div class="right">
-      <textarea class="create_textarea" id="text_sidebar" rows="27" cols="50"></textarea>
+    <div class="row" id='create-div'>
+        <div class="col-7 col-sm-7 col-md-7">
+            <div class="row">
+                <textarea id="title" rows="1" cols="92"></textarea>
+            </div>
 
-      <div id="btn_div">
-        <button class="create_button" id="save_btn" type="button" name="button" onclick="save_article();">Save</button>
-        <button class="create_button" id="view_btn" type="button" name="button" onclick="console.log('Viewing article!');">View</button>
-      </div>
+            <div class="row">
+                <textarea id="main" rows="21" cols="105"></textarea>
+            </div>
+        </div>
+
+        <div class="col-5, col-sm-5 col-md-5">
+            <textarea id="side_text" rows="21" cols="50"></textarea>
+            <button id="save" onclick="save_article()"> Save </button>
+            <button id="view"> View </button>
+        </div>
     </div>
-  </div>
 {% endblock %}
-
-{% block scripts %}
-    <script>
-      function save_article()
-      {
-        var title        = document.getElementById("title")
-        var text         = document.getElementById("text")
-        var text_sidebar = document.getElementById("text_sidebar")
-
-        if(title.value.trim().length < 1)
-        {
-            alert("This article must have a title!")
-            return 0
-        }
-
-        var entry = {
-                        title: title.value,
-                        text: text.value,
-                        text_sidebar: text_sidebar.value
-                    }
-
-        fetch('http://127.0.0.1:5000/create.html/post_json',
-              {
-                method: 'POST',
-                credentials: 'include',
-                body: JSON.stringify(entry),
-                cache: 'no-cache',
-                headers: new Headers({
-                                      "content-type": "application/json"
-                                    })
-              }
-             )
-      }
-    </script>
-{% endblock %}
-

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block title %}{% endblock %}
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        {% block style_n_scripts %}{% endblock %}
+    </head>
+
+    <body>
+        <!-- Create a 3 coloumn seperation on the screen using bootstrap. The leftmost column will be slighlty smaller. -->
+        <div class="parent-container d-flex">
+              <div class="container" style="width: 175px; margin-right:20px;">
+                  <iframe src="{{ iframe_src.sidebar }}" id="sidebar" width="175px" scrolling="no"
+                          style="position:fixed; height:100vh; border:none;
+                          border-right:1px grey solid;">
+                  </iframe>
+              </div>
+
+              <div class="container-fluid">
+                    {% block main %}{% endblock %}
+              </div>
+        </div>
+    </body>
+</html>
