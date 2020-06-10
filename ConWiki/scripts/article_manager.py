@@ -42,6 +42,8 @@ def create_n_save_article(json_data):
     json.dump(data, file)
     file.close()
 
+    print(f'\n Article {json_data["title"]} saved! \n')
+
 
 def find_article(file_name):
     # Get the current working directory.
@@ -57,6 +59,6 @@ def find_article(file_name):
             return json.load(file)
 
         else:
-            return f'<h1> ConWiki can\'t find the article {file_name}. Try creating it!'
+            return f'<h1> ConWiki can\'t find the article {file_name}. Try creating it! </h1>'
     else:
         return '<h1> ConWiki can\'t find any articles. Try creating some! </h1>'

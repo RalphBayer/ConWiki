@@ -24,7 +24,8 @@ def about():
 
 @app.route('/create')
 def create():
-    return render_template('create.html', iframe_src=iframe_src)
+    markup = {'main': '', 'side_text': ''}
+    return render_template('create.html', markup=markup, iframe_src=iframe_src)
 
 @app.route('/help')
 def help():
@@ -49,12 +50,33 @@ def save_article():
 
     return make_response(jsonify({"message": "json received"}), 200)
 
-@app.route('/load_article_html', methods=['POST', 'GET'])
+@app.route('/load_article_html', methods=['POST'])
 def load_article_html():
     file_name = request.form.get('searchbar')
-    html      = find_article(file_name)['data']['html']
+    data      = find_article(file_name)
 
-    return render_template('article.html', name=file_name, gen_html=html, iframe_src=iframe_src)
+    print(f"\n Loading html for {file_name} \n")
+
+    if not isinstance(data, str):
+        gen_html = data['data']['html']
+    else:
+        gen_html = {'main_html':data, 'side_text':''}
+
+    return render_template('article.html', name=file_name, gen_html=gen_html, iframe_src=iframe_src)
+
+@app.route('/load_article_markup/<file_name>')
+def load_article_markup(file_name):
+    file_name = file_name.replace(' ConWiki: ', '')
+    data      = find_article(file_name)
+
+    print(f"\n Loading markup for {file_name} \n")
+
+    if not isinstance(data, str):
+        markup = data['data']['markup']
+    else:
+        markup = {'main_html':data, 'side_text':''}
+
+    return render_template('create.html', title=file_name, markup=markup, iframe_src=iframe_src)
 
 
 
@@ -62,5 +84,5 @@ if __name__ == '__main__':
     app.run()
 
 # TODO:
-#       CREATE FUNCTION TO SEND JSON DATA TO JAVASCRIPT
+#       GET VIEW BUTTON TO WORK
 #       ADD MORE TOKENS TO THE Lexer CLASS.
