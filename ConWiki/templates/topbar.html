@@ -8,7 +8,7 @@
     <body>
         <div class="row">
             <form method="post" action="{{url_for('load_article_html')}}">
-                <input name="searchbar" placeholder="Search...">
+                <input name="searchbar" id="searchbar" placeholder="Search...">
                 <button id="search_btn" type="submit">
                     <img src="./static/images/search_btn_hover.png" id="search_btn_image"
                          onmouseover="this.src='./static/images/search_btn_unhover.png'"
@@ -20,7 +20,15 @@
 
         <div class="row" id="button-nav">
             <a href="http://127.0.0.1:5000/create" target="_blank"><button class="nav_btn"> Create </button></a>
-            <a href="http://127.0.0.1:5000/edit"><button class="nav_btn"> Edit </button></a>
+            <button class="nav_btn" onclick="edit_markup()"> Edit </button>
         </div>
+
+        <script type="text/javascript">
+            function edit_markup()
+            {
+                var title = window.parent.document.getElementById('page-title')
+                window.open('http://127.0.0.1:5000/load_article_markup/' + title.innerHTML)
+            }
+        </script>
     </body>
 </html>

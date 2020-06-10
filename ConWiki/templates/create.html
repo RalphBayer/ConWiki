@@ -1,8 +1,7 @@
 {% extends 'base_layout.html' %}
 
 {% block title %} <title>ConWiki: Create</title> {% endblock %}
-{% block style_n_scripts %}
-    <script type="text/javascript" src="{{ url_for('static', filename='javascript/article_handler.js') }}"></script>
+{% block style %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/create.css') }}">
 {% endblock %}
 
@@ -20,18 +19,49 @@
     <div class="row" id='create-div'>
         <div class="col-7 col-sm-7 col-md-7">
             <div class="row">
-                <textarea id="title" rows="1" cols="92"></textarea>
+                {% if title %}
+                    <textarea id="title" rows="1" cols="92">{{ title }}</textarea>
+                {% else %}
+                    <textarea id="title" rows="1" cols="92" placeholder="Title..."></textarea>
+                {% endif %}
+
             </div>
 
             <div class="row">
-                <textarea id="main" rows="21" cols="105"></textarea>
+                <textarea id="main" rows="21" cols="105">{{ markup.main }}</textarea>
             </div>
         </div>
 
         <div class="col-5, col-sm-5 col-md-5">
-            <textarea id="side_text" rows="21" cols="50"></textarea>
+            <textarea id="side_text" rows="21" cols="50">{{ markup.side_text }}</textarea>
             <button id="save" onclick="save_article()"> Save </button>
-            <button id="view"> View </button>
+            <button id="view" onclick="view()"> View </button>
         </div>
     </div>
+{% endblock %}
+
+
+{% block scripts %}
+<script type="text/javascript" src="{{ url_for('static', filename='javascript/article_handler.js') }}"></script>
+<script type="text/javascript">
+    function view()
+    {
+        save_article()
+
+        var title  = document.getElementById('title').value
+        var iframe = document.getElementsByTagName('iframe')[1]
+        var doc    = (iframe.contentWindow || iframe.contentDocument);
+
+        if (doc.document)
+        {
+          doc = doc.document;
+        }
+
+        var searchbar  = doc.getElementById('searchbar')
+        var search_btn = doc.getElementById('search_btn')
+
+        searchbar.value = title
+        search_btn.click()
+    }
+</script>
 {% endblock %}
