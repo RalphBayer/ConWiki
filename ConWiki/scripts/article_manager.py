@@ -1,6 +1,6 @@
 import json
 import os
-import markup_lexer
+import markdown
 
 def create_n_save_article(json_data):
     """
@@ -22,9 +22,8 @@ def create_n_save_article(json_data):
     """
 
     # Generate the html.
-    lexer     = markup_lexer.Lexer()
-    main_html = lexer.generate_html(lexer.get_tokens(json_data['main']))
-    side_html = lexer.generate_html(lexer.get_tokens(json_data['side_text']))
+    main_html = markdown.markdown(json_data['main'])
+    side_html = markdown.markdown(json_data['side_text'])
 
     # Open a file or create one if it doens't already exist.
     cwd = os.getcwd().replace('\\','/')
