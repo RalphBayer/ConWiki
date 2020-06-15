@@ -64,6 +64,18 @@ def load_article_html():
 
     return render_template('article.html', name=file_name, gen_html=gen_html, iframe_src=iframe_src)
 
+@app.route('/article/<article_name>')
+def article(article_name):
+    data = find_article(article_name)
+    print(f"\n Loading html for {article_name} \n")
+
+    if not isinstance(data, str):
+        gen_html = data['data']['html']
+    else:
+        gen_html = {'main_html':data, 'side_text':''}
+
+    return render_template('article.html', name=article_name, gen_html=gen_html, iframe_src=iframe_src)
+
 @app.route('/load_article_markup/<file_name>')
 def load_article_markup(file_name):
     file_name = file_name.replace(' ConWiki: ', '')
@@ -82,7 +94,3 @@ def load_article_markup(file_name):
 
 if __name__ == '__main__':
     app.run()
-
-# TODO:
-#       GET VIEW BUTTON TO WORK
-#       ADD MORE TOKENS TO THE Lexer CLASS.
