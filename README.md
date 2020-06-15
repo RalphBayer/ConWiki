@@ -50,6 +50,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 3. Daniel Reynold/CamelCaseCo (phonemic transcription and comment correction) 
 
 ## TO-DO
-1. Add more markup commands to the lexer class in article_manager.py
-2. Get view and edit button working
-4. Add markup styling guide to this repo's wiki
+1. Add a nav table to each article with links to every heading.
+2. Add common worldbuilding and conlanging tools to ConWiki side nav bar.
+3. Add commonly opened articles to ConWiki side nav bar.
