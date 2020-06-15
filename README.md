@@ -15,7 +15,7 @@ You will then need to open a terminal.
 
 Then you will need to do a python install of Flask using pip.
 
-Type: pip3 install flask
+Type: pip3 install requirements.txt
 
 Download this github repository to any place you can accsess on your computure and unzip all the files. Then keep going throught the unziped folders untill you reach a file called start.bat. Once you find it, double click on it 
   
